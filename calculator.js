@@ -6,7 +6,7 @@ function which_operation(){
     +" çarpma"
     +" bölme")
 
-    lower_case =operation.toLowerCase;
+    var lower_case =operation.toLowerCase;
 
     if (lower_case == "toplama"){
       var a = prompt("Sayı giriniz")
