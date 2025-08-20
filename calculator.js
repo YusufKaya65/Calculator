@@ -6,24 +6,24 @@ function which_operation(){
     +" çarpma"
     +" bölme")
 
-    operation.toLowerCase;
+    lower_case =operation.toLowerCase;
 
-    if (operation == "toplama"){
+    if (lower_case == "toplama"){
       var a = prompt("Sayı giriniz")
       var b = prompt("Sayı giriniz")
       addition(a,b);
     }
-    else if(operation =="çıkarma"){
+    else if(lower_case =="çıkarma"){
       var a = prompt("Sayı giriniz")
       var b = prompt("Sayı giriniz")
       subtraction();
     }
-    else if(operation == "çarpma"){
+    else if(lower_case == "çarpma"){
       var a = prompt("Sayı giriniz")
       var b = prompt("Sayı giriniz")
       multiplication();
     }
-    else if(operation =="bölme"){
+    else if(lower_case =="bölme"){
       var a = prompt("Sayı giriniz")
       var b = prompt("Sayı giriniz")
       division();
