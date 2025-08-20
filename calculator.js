@@ -6,30 +6,30 @@ function which_operation(){
     +" çarpma"
     +" bölme")
 
-    var lower_case =operation.toLowerCase;
+    var new_val = operation.toLowerCase();
 
-    if (lower_case == "toplama"){
-      var a = prompt("Sayı giriniz")
-      var b = prompt("Sayı giriniz")
+    if (new_val == "toplama"){
+      var a = Number(prompt("Sayı giriniz"));
+      var b = Number(prompt("Sayı giriniz"));
       addition(a,b);
     }
-    else if(lower_case =="çıkarma"){
-      var a = prompt("Sayı giriniz")
-      var b = prompt("Sayı giriniz")
-      subtraction();
+    else if(new_val == "çıkarma"){
+      var a = Number(prompt("Sayı giriniz"));
+      var b = Number(prompt("Sayı giriniz"));
+      subtraction(a,b);
     }
-    else if(lower_case == "çarpma"){
-      var a = prompt("Sayı giriniz")
-      var b = prompt("Sayı giriniz")
-      multiplication();
+    else if(new_val == "çarpma"){
+      var a = Number(prompt("Sayı giriniz"));
+      var b = Number(prompt("Sayı giriniz"));
+      multiplication(a,b);
     }
-    else if(lower_case =="bölme"){
-      var a = prompt("Sayı giriniz")
-      var b = prompt("Sayı giriniz")
-      division();
+    else if(new_val == "bölme"){
+      var a = Number(prompt("Sayı giriniz"));
+      var b = Number(prompt("Sayı giriniz"));
+      division(a,b);
     }
     else{
-      islem();
+      which_operation();
     }
 
 }
@@ -41,20 +41,20 @@ function addition(a,b){
 }
 
 function subtraction(a,b){
-    var sub = a+b;
+    var sub = a-b;
     console.log("Çıkarma " + sub)
 }
 
 function multiplication(a,b){
-    var multip = a+b;
+    var multip = a*b;
     console.log("Çarpma " + multip)
 }
 
 function division(a,b){
   var reminder = a%b;
   var devi= a/b;
-    console.log("Bölüm " + sum
-      +"/nKalan" + devi
+    console.log("Bölüm " + devi
+      +"\nKalan" + reminder
     )
 }
 
@@ -62,10 +62,14 @@ function main(){
   
   which_operation();
   var exit_or_not = prompt("Çıkış yapmak isitiyor musunuz?" +
-    "/n çıkış yapmak için E'ye bas" 
-    +"/devam etmek için bir tuşa bas"
+    "\n çıkış yapmak için E'ye bas" 
+    +"\ndevam etmek için bir tuşa bas"
   )
-  exit_or_not.toLocaleLowerCase;
+  exit_or_not = exit_or_not.toLowerCase();
+  
+
+
+
   if(exit_or_not != "e"){
     which_operation();
   }
